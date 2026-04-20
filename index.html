@@ -6,7 +6,7 @@
   <title>Hamidul Islam Jensin – Revenue-Focused Growth Strategist & Performance Marketer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -25,8 +25,8 @@
       --border: rgba(255,255,255,0.08);
       --border2: rgba(255,255,255,0.12);
       --radius: 16px;
-      --font-display: 'Syne', sans-serif;
-      --font-body: 'Inter', sans-serif;
+      --font-display: 'Bricolage Grotesque', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -35,8 +35,9 @@
       font-family: var(--font-body);
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
+      font-weight: 300;
     }
 
     /* ── NAV ── */
@@ -55,7 +56,7 @@
     }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
-      font-size: 0.9rem; font-weight: 500;
+      font-size: 0.9rem; font-weight: 400;
       color: var(--muted); text-decoration: none;
       transition: color 0.2s;
     }
@@ -64,7 +65,7 @@
     .nav-cta {
       background: var(--accent); color: #fff;
       padding: 10px 22px; border-radius: 50px;
-      font-size: 0.85rem; font-weight: 600;
+      font-size: 0.85rem; font-weight: 500;
       text-decoration: none; transition: background 0.2s, box-shadow 0.2s;
       box-shadow: 0 0 20px var(--accent-glow);
     }
@@ -98,25 +99,30 @@
       display: inline-flex; align-items: center; gap: 7px;
       background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3);
       padding: 7px 16px; border-radius: 50px;
-      font-size: 0.8rem; color: var(--accent); font-weight: 500;
+      font-size: 0.78rem; color: var(--accent); font-weight: 500;
       margin-bottom: 20px;
       animation: fadeUp 0.6s ease both;
+      letter-spacing: 0.3px;
     }
     .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent2); animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.3)} }
+
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      font-weight: 800; line-height: 1.1;
-      letter-spacing: -1.5px; color: #fff;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; line-height: 1.08;
+      letter-spacing: -1.8px; color: #fff;
       animation: fadeUp 0.7s 0.1s ease both;
     }
     .hero-title span { color: var(--accent); }
+
     .hero-sub {
-      font-size: 1rem; color: var(--muted); margin: 16px 0 32px;
-      max-width: 500px; font-weight: 400;
+      font-size: 1rem; color: var(--muted); margin: 18px 0 32px;
+      max-width: 500px; font-weight: 300; line-height: 1.8;
       animation: fadeUp 0.7s 0.2s ease both;
     }
+    .hero-sub strong { color: #94a3b8; font-weight: 500; }
+
     .stats {
       display: flex; gap: 16px; margin-bottom: 36px;
       animation: fadeUp 0.7s 0.3s ease both;
@@ -125,14 +131,15 @@
       background: var(--surface); border: 1px solid var(--border2);
       border-radius: var(--radius); padding: 18px 24px; text-align: center;
       min-width: 115px;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, transform 0.2s;
     }
-    .stat-box:hover { border-color: var(--accent); }
+    .stat-box:hover { border-color: var(--accent); transform: translateY(-3px); }
     .stat-num {
       font-family: var(--font-display); font-size: 1.6rem;
-      font-weight: 800; color: #fff;
+      font-weight: 800; color: #fff; line-height: 1;
     }
-    .stat-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
+    .stat-label { font-size: 0.67rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 5px; font-weight: 400; }
+
     .hero-btns {
       display: flex; gap: 14px;
       animation: fadeUp 0.7s 0.4s ease both;
@@ -140,18 +147,18 @@
     .btn-primary {
       background: var(--accent); color: #fff;
       padding: 14px 30px; border-radius: 50px;
-      font-weight: 600; font-size: 0.95rem;
+      font-weight: 500; font-size: 0.93rem;
       text-decoration: none; transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
       display: inline-flex; align-items: center; gap: 8px;
       box-shadow: 0 0 20px var(--accent-glow);
     }
     .btn-primary:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 0 35px var(--accent-glow); }
     .btn-secondary {
-      background: transparent; color: #fff;
+      background: transparent; color: #cbd5e1;
       border: 1.5px solid var(--border2);
       padding: 14px 30px; border-radius: 50px;
-      font-weight: 600; font-size: 0.95rem;
-      text-decoration: none; transition: border-color 0.2s, transform 0.15s;
+      font-weight: 400; font-size: 0.93rem;
+      text-decoration: none; transition: border-color 0.2s, transform 0.15s, color 0.2s;
     }
     .btn-secondary:hover { border-color: var(--accent); transform: translateY(-2px); color: var(--accent); }
 
@@ -168,10 +175,7 @@
       z-index: 0;
       animation: spinGlow 6s linear infinite;
     }
-    @keyframes spinGlow {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
+    @keyframes spinGlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
     .hero-photo-wrap::after {
       content: '';
       position: absolute; inset: -3px;
@@ -195,27 +199,27 @@
       font-size: 2.5rem; color: var(--accent); letter-spacing: -2px;
       position: relative; z-index: 2;
     }
-    .hero-photo-placeholder span { font-size: 0.75rem; font-weight: 500; color: var(--muted); font-family: var(--font-body); letter-spacing: 0; }
+    .hero-photo-placeholder span { font-size: 0.75rem; font-weight: 400; color: var(--muted); font-family: var(--font-body); letter-spacing: 0; }
 
     /* ── MARQUEE ── */
     .marquee-section { padding: 20px 0; overflow: hidden; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .marquee-label { text-align: center; font-size: 0.75rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; padding: 10px 0 16px; }
+    .marquee-label { text-align: center; font-size: 0.68rem; color: var(--muted); letter-spacing: 2.5px; text-transform: uppercase; padding: 10px 0 14px; font-weight: 400; }
     .marquee-track { display: flex; gap: 0; animation: marquee 30s linear infinite; white-space: nowrap; }
     .marquee-track:hover { animation-play-state: paused; }
     .marquee-item {
       display: inline-flex; align-items: center; justify-content: center;
       padding: 12px 36px; font-family: var(--font-display);
-      font-weight: 700; font-size: 1rem; color: var(--muted);
+      font-weight: 600; font-size: 0.9rem; color: var(--muted);
       border-right: 1px solid var(--border); white-space: nowrap;
-      transition: color 0.2s; min-width: 160px;
+      transition: color 0.2s; min-width: 150px;
     }
     .marquee-item:hover { color: var(--accent); }
 
     /* ── SECTIONS COMMON ── */
     #clients { padding: 100px 60px; }
-    .section-label { font-size: 0.75rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; }
-    .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; color: #fff; }
-    .section-sub { color: var(--muted); max-width: 520px; font-size: 0.97rem; margin-bottom: 60px; }
+    .section-label { font-size: 0.7rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.7rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; color: #fff; line-height: 1.12; }
+    .section-sub { color: var(--muted); max-width: 520px; font-size: 0.95rem; margin-bottom: 60px; font-weight: 300; line-height: 1.8; }
 
     /* ── LOGO GRID ── */
     .clients-grid {
@@ -231,7 +235,7 @@
       font-family: var(--font-display); font-weight: 600;
       font-size: 0.82rem; color: var(--muted); text-align: center;
       transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      cursor: default; letter-spacing: -0.2px;
+      cursor: default;
     }
     .client-card img {
       width: 48px; height: 48px;
@@ -248,8 +252,6 @@
     /* ── TESTIMONIALS ── */
     #testimonials { padding: 100px 60px; background: var(--surface); }
     #testimonials .section-label { color: var(--accent2); }
-    #testimonials .section-title { color: #fff; }
-    #testimonials .section-sub { color: var(--muted); }
     .testimonials-grid {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px; max-width: 1100px; margin: 0 auto;
@@ -260,18 +262,18 @@
       transition: border-color 0.2s, transform 0.2s;
     }
     .testimonial-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-    .t-company { font-size: 0.7rem; color: var(--accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
-    .t-heading { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 14px; }
-    .t-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+    .t-company { font-size: 0.68rem; color: var(--accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+    .t-heading { font-family: var(--font-display); font-size: 0.97rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .t-text { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 20px; font-weight: 300; }
     .t-author { display: flex; align-items: center; gap: 12px; }
     .t-avatar {
       width: 40px; height: 40px; border-radius: 50%;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 0.9rem; color: #fff;
+      font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; color: #fff;
     }
-    .t-name { font-weight: 600; font-size: 0.85rem; color: #fff; }
-    .t-role { font-size: 0.75rem; color: var(--muted); }
+    .t-name { font-weight: 500; font-size: 0.84rem; color: #fff; }
+    .t-role { font-size: 0.74rem; color: var(--muted); font-weight: 300; }
 
     /* ── EXPERTISE ── */
     #expertise { padding: 100px 60px; background: var(--bg); }
@@ -300,8 +302,8 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem; margin-bottom: 18px;
     }
-    .e-title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; color: #fff; }
-    .e-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+    .e-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 10px; color: #fff; }
+    .e-text { font-size: 0.88rem; color: var(--muted); line-height: 1.75; font-weight: 300; }
 
     /* ── CONTACT ── */
     #contact { padding: 100px 60px; background: var(--surface); }
@@ -313,13 +315,13 @@
     .contact-header { margin-bottom: 40px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
     .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-    .form-group label { font-size: 0.85rem; font-weight: 600; color: #fff; }
+    .form-group label { font-size: 0.84rem; font-weight: 500; color: #fff; }
     .form-group input,
     .form-group select,
     .form-group textarea {
       padding: 13px 16px; border: 1.5px solid var(--border);
-      border-radius: 10px; font-family: var(--font-body); font-size: 0.9rem;
-      color: #fff; background: var(--surface);
+      border-radius: 10px; font-family: var(--font-body); font-size: 0.88rem;
+      color: #fff; background: var(--surface); font-weight: 300;
       transition: border-color 0.2s, box-shadow 0.2s;
       outline: none; width: 100%;
     }
@@ -333,7 +335,7 @@
     .form-group input::placeholder, .form-group textarea::placeholder { color: var(--muted); }
     .form-group textarea { min-height: 130px; resize: vertical; }
     .form-section-title {
-      font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+      font-family: var(--font-display); font-weight: 700; font-size: 0.82rem;
       color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px;
       margin: 28px 0 16px; padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
@@ -344,7 +346,7 @@
       color: #fff; border: none; border-radius: 12px;
       font-family: var(--font-display); font-size: 1rem; font-weight: 700;
       cursor: pointer; transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
-      margin-top: 10px; letter-spacing: 0.5px;
+      margin-top: 10px; letter-spacing: 0.3px;
       box-shadow: 0 0 25px var(--accent-glow);
     }
     .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 0 40px var(--accent-glow); }
@@ -367,38 +369,30 @@
       gap: 60px; max-width: 1100px; margin: 0 auto;
       padding-bottom: 40px; border-bottom: 1px solid var(--border);
     }
-    .footer-brand { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
-    .footer-accent { color: var(--accent); font-size: 0.85rem; font-weight: 600; }
-    .footer-desc { font-size: 0.87rem; line-height: 1.7; margin: 14px 0 20px; }
+    .footer-brand { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 12px; letter-spacing: -0.3px; }
+    .footer-accent { color: var(--accent); font-size: 0.83rem; font-weight: 500; }
+    .footer-desc { font-size: 0.86rem; line-height: 1.75; margin: 14px 0 20px; font-weight: 300; }
     .footer-social { display: flex; gap: 12px; }
     .social-btn {
       width: 36px; height: 36px; border-radius: 50%;
       background: var(--surface); border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
       color: var(--muted); text-decoration: none; font-size: 0.85rem;
+      font-family: var(--font-display); font-weight: 700;
       transition: background 0.2s, color 0.2s, border-color 0.2s;
     }
     .social-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .footer-col h4 { font-family: var(--font-display); font-weight: 700; color: #fff; font-size: 0.9rem; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col h4 { font-family: var(--font-display); font-weight: 700; color: #fff; font-size: 0.85rem; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col ul a { color: var(--muted); text-decoration: none; font-size: 0.87rem; transition: color 0.2s; }
+    .footer-col ul a { color: var(--muted); text-decoration: none; font-size: 0.86rem; font-weight: 300; transition: color 0.2s; }
     .footer-col ul a:hover { color: #fff; }
-    .footer-email { color: var(--muted); font-size: 0.87rem; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-    .footer-bottom { text-align: center; padding-top: 28px; font-size: 0.8rem; color: var(--muted); max-width: 1100px; margin: 0 auto; }
+    .footer-email { color: var(--muted); font-size: 0.86rem; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-weight: 300; }
+    .footer-bottom { text-align: center; padding-top: 28px; font-size: 0.78rem; color: var(--muted); max-width: 1100px; margin: 0 auto; font-weight: 300; }
 
     /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-    .fade-in {
-      opacity: 0; transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: none; }
 
     /* ── RESPONSIVE ── */
@@ -423,208 +417,92 @@
       .about-intro { grid-template-columns: 1fr !important; }
     }
 
-    /* Toast */
+    /* ── TOAST ── */
     #toast {
       position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
       background: var(--surface2); color: #fff; padding: 14px 28px;
-      border-radius: 50px; font-size: 0.9rem; font-weight: 600;
+      border-radius: 50px; font-size: 0.88rem; font-weight: 500;
       border: 1px solid var(--border2);
       transition: transform 0.3s ease; z-index: 999; pointer-events: none;
     }
     #toast.show { transform: translateX(-50%) translateY(0); }
-    #toast.success { background: var(--accent2); border-color: var(--accent2); }
+    #toast.success { background: var(--accent2); border-color: var(--accent2); color: #0a0a0a; }
     #toast.error { background: #ef4444; border-color: #ef4444; }
 
     /* ── NEON HIGHLIGHT ── */
     .neon-highlight {
-      position: relative;
-      color: var(--accent);
-      display: inline-block;
+      position: relative; color: var(--accent); display: inline-block;
     }
     .neon-highlight::after {
-      content: '';
-      position: absolute;
-      left: -4px; right: -4px;
-      bottom: -2px; top: -2px;
-      background: rgba(108,63,255,0.13);
-      border-radius: 6px;
-      z-index: -1;
-      box-shadow: 0 0 18px 4px rgba(108,63,255,0.18), 0 0 6px 1px rgba(108,63,255,0.25);
+      content: ''; position: absolute;
+      left: -4px; right: -4px; bottom: -2px; top: -2px;
+      background: rgba(59,130,246,0.1); border-radius: 6px; z-index: -1;
     }
 
-    /* ── ABOUT / HERO EXTENDED ── */
-    .about-block {
-      margin-top: 48px;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    /* ── ABOUT ── */
+    .about-block { margin-top: 48px; max-width: 1100px; margin-left: auto; margin-right: auto; }
     .about-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-      margin-bottom: 56px;
-    }
-    @media (max-width: 900px) {
-      .about-intro { grid-template-columns: 1fr; }
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: start; margin-bottom: 56px;
     }
     .about-positioning {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 36px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 36px;
     }
-    .about-positioning p {
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 14px;
-    }
+    .about-positioning p { font-size: 0.97rem; color: var(--muted); line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
     .about-authority {
-      background: rgba(59,130,246,0.06);
-      border: 1px solid rgba(59,130,246,0.2);
-      border-radius: var(--radius);
-      padding: 36px;
-      color: rgba(255,255,255,0.75);
+      background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.2);
+      border-radius: var(--radius); padding: 36px; color: rgba(255,255,255,0.75);
     }
-    .about-authority p { font-size: 0.97rem; line-height: 1.8; margin-bottom: 14px; }
-    .about-authority strong { color: #fff; }
+    .about-authority p { font-size: 0.97rem; line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
+    .about-authority strong { color: #fff; font-weight: 600; }
 
-    /* What I Do list */
-    .what-i-do {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 36px;
-      margin-bottom: 40px;
-    }
-    .what-i-do h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-      color: #fff;
-    }
+    /* What I Do */
+    .what-i-do { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; margin-bottom: 40px; }
+    .what-i-do h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 18px; color: #fff; }
     .do-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .do-list li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 0.95rem; color: var(--muted); line-height: 1.6;
-    }
-    .do-list li::before {
-      content: '→';
-      color: var(--accent);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
+    .do-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.93rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+    .do-list li::before { content: '→'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
-    /* ── FRAMEWORK ICON GRID (6 blocks) ── */
-    .framework-section {
-      margin-bottom: 48px;
-    }
-    .framework-section h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-      color: #fff;
-    }
-    .framework-section p.fw-desc {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-    }
-    .framework-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    @media (max-width: 900px) {
-      .framework-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 500px) {
-      .framework-grid { grid-template-columns: 1fr; }
-    }
+    /* Framework Grid */
+    .framework-section { margin-bottom: 48px; }
+    .framework-section h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; color: #fff; }
+    .framework-section p.fw-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; font-weight: 300; line-height: 1.7; }
+    .framework-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .framework-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .framework-grid { grid-template-columns: 1fr; } }
     .fw-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 20px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px 20px;
       transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
       position: relative; overflow: hidden;
     }
     .fw-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0;
+      content: ''; position: absolute; top: 0; left: 0;
       width: 100%; height: 2px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
-      transform: scaleX(0); transform-origin: left;
-      transition: transform 0.3s ease;
+      transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
     }
     .fw-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(59,130,246,0.12); }
     .fw-card:hover::before { transform: scaleX(1); }
-    .fw-icon {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-      display: block;
-    }
-    .fw-card-title {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.92rem;
-      color: #fff;
-      margin-bottom: 6px;
-    }
-    .fw-card-text {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
+    .fw-icon { font-size: 1.7rem; margin-bottom: 12px; display: block; }
+    .fw-card-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: #fff; margin-bottom: 6px; }
+    .fw-card-text { font-size: 0.82rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
 
     /* Ideal client + closing */
-    .ideal-block {
-      background: linear-gradient(135deg, rgba(108,63,255,0.07), rgba(0,200,150,0.07));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 36px;
-      margin-bottom: 40px;
-    }
-    .ideal-block h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
     .ideal-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .ideal-list li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6;
-    }
+    .ideal-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.93rem; color: rgba(255,255,255,0.85); line-height: 1.6; font-weight: 300; }
     .ideal-list li .check { color: var(--accent2); font-weight: 700; flex-shrink: 0; }
 
     .closing-hook {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      text-align: center;
-      margin-bottom: 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 40px; text-align: center; margin-bottom: 0;
     }
-    .closing-hook p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 24px;
-    }
-    .closing-hook .hook-em {
-      color: #fff;
-      font-family: var(--font-display);
-      font-weight: 700;
-    }
+    .closing-hook p { color: var(--muted); font-size: 1.02rem; line-height: 1.85; margin-bottom: 24px; font-weight: 300; }
+    .closing-hook .hook-em { color: #fff; font-family: var(--font-display); font-weight: 700; }
 
-    /* ── ANIMATED COUNTER ── */
-    @keyframes countUp { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+    /* ── COUNTER ANIM ── */
+    @keyframes countUp { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
     .counter-anim { animation: countUp 0.7s ease both; }
   </style>
 </head>
@@ -652,7 +530,7 @@
     <div>
       <div class="badge"><span class="dot"></span> Available for New Projects</div>
       <h1 class="hero-title">Hi there! 👋<br>I'm <span>Hamidul Islam Jensin</span></h1>
-      <p class="hero-sub">A Revenue-Focused <span class="neon-highlight">Growth Strategist</span> &amp; Performance Marketer helping brands across eCommerce, B2B, and Educational platforms turn marketing into predictable, scalable profit.</p>
+      <p class="hero-sub">A Revenue-Focused <span class="neon-highlight">Growth Strategist</span> &amp; Performance Marketer helping brands across eCommerce, B2B, and Educational platforms turn marketing into <strong>predictable, scalable profit</strong>.</p>
       <div class="stats">
         <div class="stat-box">
           <div class="stat-num" id="adSpendCounter">$0K+</div>
@@ -680,7 +558,7 @@
         <span>Profile Photo</span>
       </div>
     </div>
-
+  </div>
 </section>
 
 <!-- MARQUEE -->
@@ -689,19 +567,18 @@
   <div class="marquee-track" id="marqueeTrack"></div>
 </div>
 
-<!-- ABOUT / FULL POSITIONING SECTION -->
+<!-- ABOUT -->
 <section id="about" style="padding: 100px 60px; background: var(--bg);">
   <div class="about-block">
     <div class="section-label fade-in">About Me</div>
     <h2 class="section-title fade-in">I Don't Just Run Ads —<br>I Build Complete <span style="color:var(--accent)">Revenue Engines</span></h2>
     <p class="section-sub fade-in">Most marketers focus on traffic. I focus on engineering complete <span class="neon-highlight">growth systems</span> — because scaling a business is about the right strategy, messaging, funnel, and data working together.</p>
 
-    <!-- Authority + Differentiation -->
     <div class="about-intro fade-in">
       <div class="about-positioning">
-        <p>Over the years, I've managed <strong style="color:var(--dark)"><span id="aboutCounter">$800K+</span></strong> in paid advertising spend and worked with <strong style="color:var(--dark)">50+ brands</strong> across multiple industries — focusing on one core objective:</p>
-        <p style="color: var(--dark); font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;">Driving real business growth, not just vanity metrics.</p>
-        <p>Whether it's scaling a fast-growing D2C brand, optimizing a B2B lead funnel, or improving conversions for an educational platform — my focus remains the same: <strong style="color:var(--accent)">maximize ROI, stabilize growth, and build systems that scale consistently.</strong></p>
+        <p>Over the years, I've managed <strong style="color:#fff;font-weight:700"><span id="aboutCounter">$800K+</span></strong> in paid advertising spend and worked with <strong style="color:#fff;font-weight:700">50+ brands</strong> across multiple industries — focusing on one core objective:</p>
+        <p style="color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 1rem;">Driving real business growth, not just vanity metrics.</p>
+        <p>Whether it's scaling a fast-growing D2C brand, optimizing a B2B lead funnel, or improving conversions for an educational platform — my focus remains the same: <strong style="color:var(--accent);font-weight:600">maximize ROI, stabilize growth, and build systems that scale consistently.</strong></p>
       </div>
       <div class="about-authority">
         <p><strong>I work best with businesses that:</strong></p>
@@ -713,7 +590,6 @@
       </div>
     </div>
 
-    <!-- What I Do -->
     <div class="what-i-do fade-in">
       <h3>What I Actually Do</h3>
       <ul class="do-list">
@@ -726,7 +602,6 @@
       </ul>
     </div>
 
-    <!-- Framework Grid (6 blocks) -->
     <div class="framework-section fade-in">
       <h3>My Growth Framework</h3>
       <p class="fw-desc">A multi-discipline approach that ensures every stage of your growth engine is optimized — not just the ads.</p>
@@ -764,10 +639,9 @@
       </div>
     </div>
 
-    <!-- Closing Hook -->
     <div class="closing-hook fade-in">
       <p>If you're looking for someone who doesn't just manage ads —<br>but builds a <span class="hook-em">complete revenue engine for your business</span>…</p>
-      <p style="font-size:0.95rem; margin-bottom: 28px;">then we should talk.</p>
+      <p style="font-size:0.93rem; margin-bottom: 28px; font-weight:300;">then we should talk.</p>
       <a href="#contact" class="btn-primary" style="display:inline-flex;">Let's Work Together →</a>
     </div>
   </div>
@@ -881,7 +755,7 @@
           <option value="$15,000 – $50,000">$15,000 – $50,000</option>
           <option value="$50,000+">$50,000+</option>
         </select>
-        <small style="color:var(--muted);font-size:0.78rem">This helps me understand your scale and provide relevant strategies</small>
+        <small style="color:var(--muted);font-size:0.77rem;font-weight:300;">This helps me understand your scale and provide relevant strategies</small>
       </div>
 
       <div class="form-section-title">Project Information</div>
@@ -924,7 +798,7 @@
     </div>
     <div class="footer-col">
       <h4>Get In Touch</h4>
-      <p class="footer-desc" style="font-size:0.83rem">If anything related to business, please email me or fill out the form.</p>
+      <p class="footer-desc" style="font-size:0.82rem">If anything related to business, please email me or fill out the form.</p>
       <div class="footer-email">📧 jensinhamidulislam@gmail.com</div>
     </div>
   </div>
@@ -954,9 +828,6 @@
     { company:"Skilluper", heading:"Unforgettable Collaborator", text:"Shamim always gave 100% effort. His media buying insights helped us deliver projects on time with real impact.", name:"Shamim Hussain", role:"Founder, Skilluper" },
   ];
 
-  // ── RENDER LOGO GRID FROM logo/ DIRECTORY ──
-  // Add logo filenames here — name the files after the brand (e.g. "ZatiqEasy.png")
-  // The script reads each file from the logo/ folder and shows the image + brand name.
   const logoFiles = [
     { file: "ZatiqEasy.png",       name: "ZatiqEasy" },
     { file: "GhorerBazar.png",     name: "GhorerBazar" },
@@ -992,22 +863,17 @@
     { file: "DapperBespoke.png",   name: "Dapper Bespoke" },
   ];
 
+  // ── RENDER CLIENTS ──
   const grid = document.getElementById('clientsGrid');
   logoFiles.forEach(({ file, name }) => {
     const card = document.createElement('div');
     card.className = 'client-card fade-in';
-
     const img = document.createElement('img');
-    img.src = `logo/${file}`;
-    img.alt = name;
-    // If logo file doesn't exist, hide the img and show name only
+    img.src = `logo/${file}`; img.alt = name;
     img.onerror = function() { this.style.display = 'none'; };
-
     const label = document.createElement('span');
     label.textContent = name;
-
-    card.appendChild(img);
-    card.appendChild(label);
+    card.appendChild(img); card.appendChild(label);
     grid.appendChild(card);
   });
 
@@ -1052,20 +918,13 @@
     setTimeout(() => { t.className = ''; }, 4000);
   }
 
-  // ── FORM SUBMIT via Formspree ──
-  // IMPORTANT: Replace YOUR_FORM_ID below with your Formspree form ID.
-  // Sign up free at https://formspree.io → create a form → copy the ID.
-  // The form will send emails to the address you register with.
-  // Current target: jensinhamidulislam@gmail.com
-
-  const FORMSPREE_ID = 'YOUR_FORM_ID'; // ← Replace this
+  // ── FORM SUBMIT ──
+  const FORMSPREE_ID = 'YOUR_FORM_ID'; // ← Replace with your Formspree ID
 
   document.getElementById('leadForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
+    btn.disabled = true; btn.textContent = 'Sending...';
     const data = {
       fullName: document.getElementById('fullName').value,
       email: document.getElementById('email').value,
@@ -1077,64 +936,50 @@
       _replyto: document.getElementById('email').value,
       _subject: `New Lead from ${document.getElementById('fullName').value} – Jensin Portfolio`,
     };
-
     try {
-      // Option A: Formspree (recommended — free, no backend needed)
-      // Replace YOUR_FORM_ID with your actual Formspree form ID
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
       });
-
       if (res.ok) {
         document.getElementById('leadForm').style.display = 'none';
         document.getElementById('formSuccess').style.display = 'block';
         showToast('Message sent successfully! ✅', 'success');
-      } else {
-        throw new Error('Form submission failed');
-      }
+      } else { throw new Error('failed'); }
     } catch (err) {
       showToast('Something went wrong. Please email jensinhamidulislam@gmail.com directly.', 'error');
-      btn.disabled = false;
-      btn.textContent = '☕ Let\'s have a coffee';
+      btn.disabled = false; btn.textContent = "☕ Let's have a coffee";
     }
   });
 
-  // ── ANIMATED $800K+ COUNTER ──
+  // ── ANIMATED COUNTER ──
   function animateCounter(el, target, prefix, suffix, duration) {
     let start = 0;
     const step = target / (duration / 16);
     el.classList.add('counter-anim');
     const timer = setInterval(() => {
       start += step;
-      if (start >= target) {
-        start = target;
-        clearInterval(timer);
-      }
+      if (start >= target) { start = target; clearInterval(timer); }
       el.textContent = prefix + Math.floor(start) + suffix;
     }, 16);
   }
-
   const counterEl = document.getElementById('adSpendCounter');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(counterEl, 800, '$', 'K+', 1400);
-        counterObserver.disconnect();
-      }
+      if (e.isIntersecting) { animateCounter(counterEl, 800, '$', 'K+', 1400); counterObserver.disconnect(); }
     });
   }, { threshold: 0.5 });
   counterObserver.observe(counterEl);
 
-  // Active nav link on scroll
+  // ── ACTIVE NAV ON SCROLL ──
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
     const y = window.scrollY + 80;
     sections.forEach(s => {
       const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
-      if(!link) return;
-      if(y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
+      if (!link) return;
+      if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
         document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
         link.classList.add('active');
       }
