@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hamidul Islam Jensin – Revenue-Focused Growth Strategist & Performance Marketer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -20,8 +20,8 @@
       --muted: #6b6b6b;
       --border: #e0dfd9;
       --radius: 16px;
-      --font-display: 'Syne', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -548,7 +548,7 @@
     .ideal-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .ideal-list li {
       display: flex; align-items: flex-start; gap: 10px;
-      font-size: 0.95rem; color: var(--text); line-height: 1.6;
+      font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6;
     }
     .ideal-list li .check { color: var(--accent2); font-weight: 700; flex-shrink: 0; }
 
@@ -871,7 +871,7 @@
     <div class="footer-col">
       <h4>Get In Touch</h4>
       <p class="footer-desc" style="font-size:0.83rem">If anything related to business, please email me or fill out the form.</p>
-      <div class="footer-email">📧 info@helloshamim.com</div>
+      <div class="footer-email">📧 jensinhamidulislam@gmail.com</div>
     </div>
   </div>
   <div class="footer-bottom">© 2025 Hamidul Islam Jensin. All rights reserved. • Revenue-Focused Growth Strategist & Performance Marketer</div>
@@ -973,7 +973,7 @@
       budget: document.getElementById('budget').value,
       details: document.getElementById('details').value,
       _replyto: document.getElementById('email').value,
-      _subject: `New Lead from ${document.getElementById('fullName').value} – helloshamim Portfolio`,
+      _subject: `New Lead from ${document.getElementById('fullName').value} – Jensin Portfolio`,
     };
 
     try {
@@ -993,7 +993,7 @@
         throw new Error('Form submission failed');
       }
     } catch (err) {
-      showToast('Something went wrong. Please email info@helloshamim.com directly.', 'error');
+      showToast('Something went wrong. Please email jensinhamidulislam@gmail.com directly.', 'error');
       btn.disabled = false;
       btn.textContent = '☕ Let\'s have a coffee';
     }
