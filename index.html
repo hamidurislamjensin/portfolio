@@ -1,186 +1,742 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jensin | Growth Specialist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rashidul Hasan Shamim – Media Buyer & Growth Strategist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --dark: #0f0f0f;
+      --dark2: #1a1a2e;
+      --accent: #6c3fff;
+      --accent2: #00c896;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --border: #e0dfd9;
+      --radius: 16px;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
 
-<style>
-body{
-    margin:0;
-    font-family:Poppins;
-    background:#0A0F1C;
-    color:#fff;
-}
+    html { scroll-behavior: smooth; }
 
-/* GLOBAL */
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:radial-gradient(circle at center,#001F2F,#000);
-}
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 60px;
+      background: rgba(245,244,240,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 800; font-size: 1.1rem;
+      color: var(--dark); letter-spacing: -0.5px;
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 0.9rem; font-weight: 500;
+      color: var(--muted); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--dark); }
+    .nav-links a.active { border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    .nav-cta {
+      background: var(--dark); color: #fff;
+      padding: 10px 22px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent); }
 
-.hero h1{
-    font-size:3rem;
-    background:linear-gradient(90deg,#00E5FF,#7B61FF);
-    -webkit-background-clip:text;
-    color:transparent;
-}
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 120px 60px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-blob {
+      position: absolute; top: -100px; right: -100px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(108,63,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-blob2 {
+      position: absolute; bottom: -80px; left: -60px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,200,150,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 60px; align-items: center;
+      max-width: 1100px; margin: 0 auto; width: 100%;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: #fff; border: 1px solid var(--border);
+      padding: 7px 16px; border-radius: 50px;
+      font-size: 0.8rem; color: var(--muted); font-weight: 500;
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent2); }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -1.5px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero-title span { color: var(--accent); }
+    .hero-sub {
+      font-size: 1rem; color: var(--muted); margin: 16px 0 32px;
+      max-width: 480px; font-weight: 400;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .stats {
+      display: flex; gap: 16px; margin-bottom: 36px;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+    .stat-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 24px; text-align: center;
+      min-width: 110px;
+    }
+    .stat-num {
+      font-family: var(--font-display); font-size: 1.6rem;
+      font-weight: 800; color: var(--dark);
+    }
+    .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
+    .hero-btns {
+      display: flex; gap: 14px;
+      animation: fadeUp 0.7s 0.4s ease both;
+    }
+    .btn-primary {
+      background: var(--dark); color: #fff;
+      padding: 14px 30px; border-radius: 50px;
+      font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; transition: background 0.2s, transform 0.15s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+    .btn-secondary {
+      background: transparent; color: var(--dark);
+      border: 1.5px solid var(--border);
+      padding: 14px 30px; border-radius: 50px;
+      font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; transition: border-color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--dark); transform: translateY(-2px); }
+    .hero-photo-wrap {
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-photo {
+      width: 280px; height: 280px; border-radius: 50%;
+      object-fit: cover; border: 4px solid var(--surface);
+      box-shadow: 0 20px 60px rgba(108,63,255,0.18);
+      display: block;
+    }
+    .hero-photo-placeholder {
+      width: 280px; height: 280px; border-radius: 50%;
+      background: linear-gradient(135deg, #6c3fff22, #00c89622);
+      border: 4px solid var(--surface);
+      box-shadow: 0 20px 60px rgba(108,63,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px;
+      font-family: var(--font-display); font-weight: 800;
+      font-size: 2.5rem; color: var(--accent); letter-spacing: -2px;
+    }
+    .hero-photo-placeholder span { font-size: 0.75rem; font-weight: 500; color: var(--muted); font-family: var(--font-body); letter-spacing: 0; }
 
-.btn{
-    background:#00E5FF;
-    padding:12px 30px;
-    border-radius:30px;
-    display:inline-block;
-    margin-top:20px;
-    color:#000;
-    text-decoration:none;
-    font-weight:600;
-}
+    /* ── MARQUEE (clients) ── */
+    .marquee-section { padding: 20px 0; overflow: hidden; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .marquee-label { text-align: center; font-size: 0.75rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; padding: 10px 0 16px; }
+    .marquee-track { display: flex; gap: 0; animation: marquee 30s linear infinite; white-space: nowrap; }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-item {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 36px; font-family: var(--font-display);
+      font-weight: 700; font-size: 1rem; color: var(--muted);
+      border-right: 1px solid var(--border); white-space: nowrap;
+      transition: color 0.2s;
+      min-width: 160px;
+    }
+    .marquee-item:hover { color: var(--accent); }
 
-/* STATS */
-.stats{
-    display:flex;
-    justify-content:space-around;
-    padding:60px 0;
-}
+    /* ── COMPANIES ── */
+    #clients { padding: 100px 60px; }
+    .section-label { font-size: 0.75rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; }
+    .section-sub { color: var(--muted); max-width: 520px; font-size: 0.97rem; margin-bottom: 60px; }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 14px; max-width: 1100px; margin: 0 auto;
+    }
+    .client-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 0.85rem; color: var(--dark); text-align: center;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      cursor: default; letter-spacing: -0.3px;
+    }
+    .client-card:hover {
+      border-color: var(--accent); transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(108,63,255,0.1);
+      color: var(--accent);
+    }
 
-.stat h2{
-    color:#00E5FF;
-}
+    /* ── TESTIMONIALS ── */
+    #testimonials { padding: 100px 60px; background: var(--dark2); }
+    #testimonials .section-label { color: var(--accent2); }
+    #testimonials .section-title { color: #fff; }
+    #testimonials .section-sub { color: rgba(255,255,255,0.5); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px; max-width: 1100px; margin: 0 auto;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius); padding: 30px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .testimonial-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .t-company { font-size: 0.7rem; color: var(--accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+    .t-heading { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .t-text { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 20px; }
+    .t-author { display: flex; align-items: center; gap: 12px; }
+    .t-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.9rem; color: #fff;
+    }
+    .t-name { font-weight: 600; font-size: 0.85rem; color: #fff; }
+    .t-role { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
 
-/* FLOW */
-.flow{
-    padding:80px 0;
-    text-align:center;
-}
+    /* ── EXPERTISE ── */
+    #expertise { padding: 100px 60px; }
+    .expertise-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 20px; max-width: 1100px; margin: 0 auto;
+    }
+    .expertise-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 36px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .expertise-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      transform: scaleY(0); transform-origin: top;
+      transition: transform 0.3s ease;
+    }
+    .expertise-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .expertise-card:hover::before { transform: scaleY(1); }
+    .e-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(108,63,255,0.12), rgba(0,200,150,0.12));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 18px;
+    }
+    .e-title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; }
+    .e-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 
-/* CASE */
-.case{
-    padding:80px 0;
-}
+    /* ── CONTACT ── */
+    #contact { padding: 100px 60px; }
+    .contact-inner {
+      max-width: 900px; margin: 0 auto;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 60px;
+    }
+    .contact-header { margin-bottom: 40px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; color: var(--dark); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 13px 16px; border: 1.5px solid var(--border);
+      border-radius: 10px; font-family: var(--font-body); font-size: 0.9rem;
+      color: var(--dark); background: var(--bg);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none; width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108,63,255,0.1);
+    }
+    .form-group textarea { min-height: 130px; resize: vertical; }
+    .form-section-title {
+      font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+      color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px;
+      margin: 28px 0 16px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .btn-submit {
+      width: 100%; padding: 16px;
+      background: linear-gradient(135deg, var(--accent), #8b5fff);
+      color: #fff; border: none; border-radius: 12px;
+      font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: opacity 0.2s, transform 0.15s;
+      margin-top: 10px; letter-spacing: 0.5px;
+    }
+    .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-success {
+      display: none; text-align: center; padding: 30px;
+      color: var(--accent2); font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 700;
+    }
+    .required-star { color: var(--accent); }
 
-.case-card{
-    background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:10px;
-    margin-top:20px;
-}
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark); color: rgba(255,255,255,0.6);
+      padding: 60px 60px 30px;
+    }
+    .footer-inner {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px; max-width: 1100px; margin: 0 auto;
+      padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .footer-accent { color: var(--accent2); font-size: 0.85rem; font-weight: 600; }
+    .footer-desc { font-size: 0.87rem; line-height: 1.7; margin: 14px 0 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .social-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .footer-col h4 { font-family: var(--font-display); font-weight: 700; color: #fff; font-size: 0.9rem; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.87rem; transition: color 0.2s; }
+    .footer-col ul a:hover { color: #fff; }
+    .footer-email { color: rgba(255,255,255,0.6); font-size: 0.87rem; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .footer-bottom { text-align: center; padding-top: 28px; font-size: 0.8rem; color: rgba(255,255,255,0.3); max-width: 1100px; margin: 0 auto; }
 
-/* LOGO GRID */
-.logos{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
-    padding:60px 0;
-}
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .fade-in {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
 
-.logo{
-    background:#111;
-    padding:20px;
-    text-align:center;
-    border-radius:10px;
-}
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      #home { padding: 100px 24px 60px; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-photo-placeholder, .hero-photo { width: 200px; height: 200px; margin: 0 auto; }
+      .stats { justify-content: center; flex-wrap: wrap; }
+      .hero-btns { justify-content: center; flex-wrap: wrap; }
+      #clients, #testimonials, #expertise, #contact { padding: 60px 24px; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .contact-inner { padding: 36px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { padding: 40px 24px 20px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 30px; }
+      .clients-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+    }
 
-/* TESTIMONIAL */
-.testimonial{
-    padding:80px 0;
-}
-
-/* CTA */
-.cta{
-    text-align:center;
-    padding:100px 0;
-}
-
-input{
-    padding:12px;
-    margin:10px;
-    border:none;
-    border-radius:10px;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:30px;
-}
-</style>
+    /* Toast */
+    #toast {
+      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--dark); color: #fff; padding: 14px 28px;
+      border-radius: 50px; font-size: 0.9rem; font-weight: 600;
+      transition: transform 0.3s ease; z-index: 999; pointer-events: none;
+    }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+    #toast.success { background: var(--accent2); }
+    #toast.error { background: #e53e3e; }
+  </style>
 </head>
-
 <body>
 
-<section class="hero">
-<div>
-<h1>I Build Profitable Growth Systems</h1>
-<p>$800K+ Ad Spend Managed | Scaling Ecom Brands</p>
-<a class="btn">Get Free Audit</a>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Rashidul Hasan Shamim</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#expertise">Services</a></li>
+    <li><a href="#contact" class="active">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's Work →</a>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-blob"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="badge"><span class="dot"></span> Available for New Projects</div>
+      <h1 class="hero-title">Hi there! 👋<br>I'm <span>Rashidul Hasan Shamim</span></h1>
+      <p class="hero-sub">I'm a Strategist, Planner, and Media Buyer helping D2C brands scale to 6–9 figures monthly using Meta and Google Ads.</p>
+      <div class="stats">
+        <div class="stat-box">
+          <div class="stat-num">$10M+</div>
+          <div class="stat-label">Ad Spend</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">60+</div>
+          <div class="stat-label">Brands</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Years Exp.</div>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Let's Work Together →</a>
+        <a href="#clients" class="btn-secondary">View Clients</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-placeholder">
+        RHS
+        <span>Add your photo here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-label">Trusted by leading brands</div>
+  <div class="marquee-track" id="marqueeTrack"></div>
 </div>
+
+<!-- CLIENTS GRID -->
+<section id="clients">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-label fade-in">Trusted By</div>
+    <h2 class="section-title fade-in">Companies I've Worked With</h2>
+    <p class="section-sub fade-in">A growing roster of D2C brands, healthcare companies, and institutions across Bangladesh.</p>
+    <div class="clients-grid" id="clientsGrid"></div>
+  </div>
 </section>
 
-<section class="stats container">
-<div class="stat"><h2>$800K+</h2><p>Ad Spend</p></div>
-<div class="stat"><h2>5X</h2><p>ROAS</p></div>
-<div class="stat"><h2>50+</h2><p>Brands</p></div>
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-label fade-in">Social Proof</div>
+    <h2 class="section-title fade-in">What People Say <span style="color:var(--accent2)">About My Work</span></h2>
+    <p class="section-sub fade-in">Real testimonials from industry professionals who experienced transformational results.</p>
+    <div class="testimonials-grid fade-in" id="testimonialsGrid"></div>
+  </div>
 </section>
 
-<section class="flow container">
-<h2>How I Grow Brands</h2>
-<p>Traffic → Funnel → Offer → Conversion → Retargeting → Repeat Sales</p>
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-label fade-in">My Expertise</div>
+    <h2 class="section-title fade-in">How I Help Brands <span style="color:var(--accent)">Scale</span></h2>
+    <p class="section-sub fade-in">Specialized in helping established brands ($500k+ revenue) reach $5M+ through proven strategies.</p>
+    <div class="expertise-grid fade-in">
+      <div class="expertise-card">
+        <div class="e-icon">📡</div>
+        <div class="e-title">Paid Media Strategy</div>
+        <div class="e-text">Strategic media planning and buying across all major platforms with a focus on achieving 300%+ ROAS and sustainable scaling.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="e-icon">📈</div>
+        <div class="e-title">Performance Marketing</div>
+        <div class="e-text">$10M+ in data-driven campaigns across Facebook, Google & TikTok — built to convert, built to scale.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="e-icon">🎨</div>
+        <div class="e-title">Creative Strategy</div>
+        <div class="e-text">Developing high-converting creative strategies and frameworks that speak to your audience and drive engagement.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="e-icon">📊</div>
+        <div class="e-title">Analytics & Optimization</div>
+        <div class="e-text">Deep-dive analytics setup, conversion tracking, and continuous optimization to maximize your marketing ROI.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="case container">
-<h2>Case Studies</h2>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner fade-in">
+    <div class="contact-header">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Ready to <span style="color:var(--accent)">Scale</span> Your Brand?</h2>
+      <p class="section-sub" style="margin-bottom:0">Let's discuss how we can take your marketing to the next level with proven strategies.</p>
+    </div>
 
-<div class="case-card">
-<h3>Brand Scaling</h3>
-<p>From low ROAS to 5X using funnel strategy</p>
-</div>
+    <form id="leadForm">
+      <div class="form-section-title">Contact Information</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullName">Full Name <span class="required-star">*</span></label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address <span class="required-star">*</span></label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX">
+      </div>
 
-<div class="case-card">
-<h3>Lead Generation</h3>
-<p>Generated 10k+ leads</p>
-</div>
+      <div class="form-section-title">Professional Details</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="role">Position / Role <span class="required-star">*</span></label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Founder / CEO">Founder / CEO</option>
+            <option value="Co-Founder">Co-Founder</option>
+            <option value="Marketing Manager">Marketing Manager</option>
+            <option value="E-commerce Manager">E-commerce Manager</option>
+            <option value="CMO">CMO</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="website">Business Website <span class="required-star">*</span></label>
+          <input type="url" id="website" name="website" placeholder="https://yourbrand.com" required>
+        </div>
+      </div>
 
+      <div class="form-section-title">Business Metrics</div>
+      <div class="form-group">
+        <label for="budget">Monthly Ad Budget <span class="required-star">*</span></label>
+        <select id="budget" name="budget" required>
+          <option value="" disabled selected>Select your monthly ad budget</option>
+          <option value="Under $1,000">Under $1,000</option>
+          <option value="$1,000 – $5,000">$1,000 – $5,000</option>
+          <option value="$5,000 – $15,000">$5,000 – $15,000</option>
+          <option value="$15,000 – $50,000">$15,000 – $50,000</option>
+          <option value="$50,000+">$50,000+</option>
+        </select>
+        <small style="color:var(--muted);font-size:0.78rem">This helps me understand your scale and provide relevant strategies</small>
+      </div>
+
+      <div class="form-section-title">Project Information</div>
+      <div class="form-group">
+        <label for="details">Project Details <span class="required-star">*</span></label>
+        <textarea id="details" name="details" placeholder="Tell me about your business goals, current advertising situation, and what you're looking to achieve..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submitBtn">☕ Let's have a coffee</button>
+      <div class="form-success" id="formSuccess">
+        ✅ Your message has been sent! I'll get back to you within 24 hours.
+      </div>
+    </form>
+  </div>
 </section>
 
-<section class="logos container">
-<div class="logo">Client 1</div>
-<div class="logo">Client 2</div>
-<div class="logo">Client 3</div>
-<div class="logo">Client 4</div>
-<div class="logo">Client 5</div>
-</section>
-
-<section class="testimonial container">
-<h2>Client Reviews</h2>
-<p>"Great results and scaling strategy!"</p>
-</section>
-
-<section class="cta">
-<h2>Want to Scale Your Sales?</h2>
-<input placeholder="Your Name">
-<input placeholder="Website">
-<br>
-<a class="btn">Get Free Plan</a>
-</section>
-
+<!-- FOOTER -->
 <footer>
-© Jensin Growth System
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Rashidul Hasan Shamim</div>
+      <div class="footer-accent">Media Buyer & Growth Strategist</div>
+      <p class="footer-desc">I'm a media buyer and digital marketing strategist from Bangladesh. I specialize in performance marketing, paid advertising, and ROI-focused campaign optimization.</p>
+      <div class="footer-social">
+        <a href="https://web.facebook.com/Shamim.Digital" class="social-btn" target="_blank" rel="noopener" title="Facebook">f</a>
+        <a href="https://x.com/shamimthepro" class="social-btn" target="_blank" rel="noopener" title="Twitter / X">𝕏</a>
+        <a href="https://www.linkedin.com/in/rashiduldigital/" class="social-btn" target="_blank" rel="noopener" title="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#expertise">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <p class="footer-desc" style="font-size:0.83rem">If anything related to business, please email me or fill out the form.</p>
+      <div class="footer-email">📧 info@helloshamim.com</div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Rashidul Hasan Shamim. All rights reserved. • Media Buyer & Growth Strategist</div>
 </footer>
 
+<div id="toast"></div>
+
+<script>
+  // ── DATA ──
+  const clients = [
+    "ZatiqEasy","GhorerBazar","GoodyBro","ZUQO","Asiatic 360",
+    "Telaa","Being Human","BOHU Furniture","JOTEY","Bosphorus",
+    "Koryori","SmartLife","Univ. of South Asia","Masculine","Hazzle",
+    "Neviforce","Mango Lover","BRAC Healthcare","Comfystyle","Crimson Cup",
+    "CRISP","Imo","Flipper","Nadia Furniture","Govaly",
+    "ACI Pure","ACI Nutrilife","Fiero","EcoEats","Glassesbd",
+    "Zantrik","Dapper Bespoke"
+  ];
+
+  const testimonials = [
+    { company:"ZUQO", heading:"From Zero to 5 Million+", text:"He is a superman in the digital marketing space. From zero to 5 million in monthly sales – all credit goes to him. Thank you very much!", name:"Md. Tarikul Islam Tuhin", role:"Founder, Zuqo" },
+    { company:"GoodyBro", heading:"The Best in His Field", text:"He is absolutely the best in his field. Loved working with Shamim. He helped scale GoodyBro to new heights.", name:"Ahnaf T Rahman", role:"Founder & Director, Goodybro" },
+    { company:"Nagad LTD", heading:"Transformed Our Marketing", text:"For 3 years, Shamim was key to our ad success. His creativity, data-driven strategies, and deep platform expertise brought real business growth. A true team player.", name:"Shekh Ariful Islam Piash", role:"Senior Manager, Brand & Digital, Nagad LTD" },
+    { company:"Mediam Group", heading:"Exceptional Growth Driver", text:"A true digital marketing expert with strong skills in report automation and e-commerce growth. A valuable asset to any team.", name:"Syed Abrar Ahmad", role:"Senior Digital Marketer, Mediam Group" },
+    { company:"GoodyBro", heading:"Constantly Evolving", text:"He constantly works on himself and his skills, keen to learn new things — it's the best thing about him! He is good at what he does and never lacks in effort.", name:"Maleena Gomez", role:"Founder, Aneemal Studios" },
+    { company:"Skilluper", heading:"Unforgettable Collaborator", text:"Shamim always gave 100% effort. His media buying insights helped us deliver projects on time with real impact.", name:"Shamim Hussain", role:"Founder, Skilluper" },
+  ];
+
+  // ── RENDER CLIENTS GRID ──
+  const grid = document.getElementById('clientsGrid');
+  clients.forEach(c => {
+    const el = document.createElement('div');
+    el.className = 'client-card fade-in';
+    el.textContent = c;
+    grid.appendChild(el);
+  });
+
+  // ── RENDER MARQUEE ──
+  const track = document.getElementById('marqueeTrack');
+  const allItems = [...clients, ...clients];
+  allItems.forEach(c => {
+    const el = document.createElement('span');
+    el.className = 'marquee-item';
+    el.textContent = c;
+    track.appendChild(el);
+  });
+
+  // ── RENDER TESTIMONIALS ──
+  const tGrid = document.getElementById('testimonialsGrid');
+  testimonials.forEach(t => {
+    tGrid.innerHTML += `
+      <div class="testimonial-card fade-in">
+        <div class="t-company">${t.company}</div>
+        <div class="t-heading">${t.heading}</div>
+        <p class="t-text">${t.text}</p>
+        <div class="t-author">
+          <div class="t-avatar">${t.name.split(' ').map(w=>w[0]).slice(0,2).join('')}</div>
+          <div>
+            <div class="t-name">${t.name}</div>
+            <div class="t-role">${t.role}</div>
+          </div>
+        </div>
+      </div>`;
+  });
+
+  // ── SCROLL ANIMATIONS ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── TOAST ──
+  function showToast(msg, type='') {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.className = type ? `show ${type}` : 'show';
+    setTimeout(() => { t.className = ''; }, 4000);
+  }
+
+  // ── FORM SUBMIT via Formspree ──
+  // IMPORTANT: Replace YOUR_FORM_ID below with your Formspree form ID.
+  // Sign up free at https://formspree.io → create a form → copy the ID.
+  // The form will send emails to the address you register with.
+  // Current target: jensinhamidulislam@gmail.com
+
+  const FORMSPREE_ID = 'YOUR_FORM_ID'; // ← Replace this
+
+  document.getElementById('leadForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const data = {
+      fullName: document.getElementById('fullName').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      role: document.getElementById('role').value,
+      website: document.getElementById('website').value,
+      budget: document.getElementById('budget').value,
+      details: document.getElementById('details').value,
+      _replyto: document.getElementById('email').value,
+      _subject: `New Lead from ${document.getElementById('fullName').value} – helloshamim Portfolio`,
+    };
+
+    try {
+      // Option A: Formspree (recommended — free, no backend needed)
+      // Replace YOUR_FORM_ID with your actual Formspree form ID
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        document.getElementById('leadForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+        showToast('Message sent successfully! ✅', 'success');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (err) {
+      showToast('Something went wrong. Please email info@helloshamim.com directly.', 'error');
+      btn.disabled = false;
+      btn.textContent = '☕ Let\'s have a coffee';
+    }
+  });
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY + 80;
+    sections.forEach(s => {
+      const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+      if(!link) return;
+      if(y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
+        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
 </body>
 </html>
-
