@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rashidul Hasan Shamim – Media Buyer & Growth Strategist</title>
+  <title>Hamidul Islam Jensin – Revenue-Focused Growth Strategist & Performance Marketer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -385,15 +385,205 @@
     #toast.show { transform: translateX(-50%) translateY(0); }
     #toast.success { background: var(--accent2); }
     #toast.error { background: #e53e3e; }
+
+    /* ── NEON HIGHLIGHT ── */
+    .neon-highlight {
+      position: relative;
+      color: var(--accent);
+      display: inline-block;
+    }
+    .neon-highlight::after {
+      content: '';
+      position: absolute;
+      left: -4px; right: -4px;
+      bottom: -2px; top: -2px;
+      background: rgba(108,63,255,0.13);
+      border-radius: 6px;
+      z-index: -1;
+      box-shadow: 0 0 18px 4px rgba(108,63,255,0.18), 0 0 6px 1px rgba(108,63,255,0.25);
+    }
+
+    /* ── ABOUT / HERO EXTENDED ── */
+    .about-block {
+      margin-top: 48px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 900px) {
+      .about-intro { grid-template-columns: 1fr; }
+    }
+    .about-positioning {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .about-positioning p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .about-authority {
+      background: var(--dark2);
+      border-radius: var(--radius);
+      padding: 36px;
+      color: rgba(255,255,255,0.75);
+    }
+    .about-authority p { font-size: 0.97rem; line-height: 1.8; margin-bottom: 14px; }
+    .about-authority strong { color: #fff; }
+
+    /* What I Do list */
+    .what-i-do {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      margin-bottom: 40px;
+    }
+    .what-i-do h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: var(--dark);
+    }
+    .do-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .do-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.95rem; color: var(--text); line-height: 1.6;
+    }
+    .do-list li::before {
+      content: '→';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── FRAMEWORK ICON GRID (6 blocks) ── */
+    .framework-section {
+      margin-bottom: 48px;
+    }
+    .framework-section h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .framework-section p.fw-desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .framework-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .framework-grid { grid-template-columns: 1fr; }
+    }
+    .fw-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 20px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .fw-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .fw-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(108,63,255,0.1); }
+    .fw-card:hover::before { transform: scaleX(1); }
+    .fw-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .fw-card-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .fw-card-text {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Ideal client + closing */
+    .ideal-block {
+      background: linear-gradient(135deg, rgba(108,63,255,0.07), rgba(0,200,150,0.07));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      margin-bottom: 40px;
+    }
+    .ideal-block h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .ideal-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .ideal-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.95rem; color: var(--text); line-height: 1.6;
+    }
+    .ideal-list li .check { color: var(--accent2); font-weight: 700; flex-shrink: 0; }
+
+    .closing-hook {
+      background: var(--dark2);
+      border-radius: var(--radius);
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .closing-hook p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .closing-hook .hook-em {
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 700;
+    }
+
+    /* ── ANIMATED COUNTER ── */
+    @keyframes countUp { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+    .counter-anim { animation: countUp 0.7s ease both; }
   </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Rashidul Hasan Shamim</div>
+  <div class="nav-logo">Hamidul Islam Jensin</div>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#clients">Clients</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#expertise">Services</a></li>
@@ -409,20 +599,20 @@
   <div class="hero-inner">
     <div>
       <div class="badge"><span class="dot"></span> Available for New Projects</div>
-      <h1 class="hero-title">Hi there! 👋<br>I'm <span>Rashidul Hasan Shamim</span></h1>
-      <p class="hero-sub">I'm a Strategist, Planner, and Media Buyer helping D2C brands scale to 6–9 figures monthly using Meta and Google Ads.</p>
+      <h1 class="hero-title">Hi there! 👋<br>I'm <span>Hamidul Islam Jensin</span></h1>
+      <p class="hero-sub">A Revenue-Focused <span class="neon-highlight">Growth Strategist</span> &amp; Performance Marketer helping brands across eCommerce, B2B, and Educational platforms turn marketing into predictable, scalable profit.</p>
       <div class="stats">
         <div class="stat-box">
-          <div class="stat-num">$10M+</div>
-          <div class="stat-label">Ad Spend</div>
+          <div class="stat-num" id="adSpendCounter">$0K+</div>
+          <div class="stat-label">Ad Spend Managed</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">60+</div>
-          <div class="stat-label">Brands</div>
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Brands Worked With</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">8+</div>
-          <div class="stat-label">Years Exp.</div>
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Industries Served</div>
         </div>
       </div>
       <div class="hero-btns">
@@ -432,7 +622,7 @@
     </div>
     <div class="hero-photo-wrap">
       <div class="hero-photo-placeholder">
-        RHS
+        HIJ
         <span>Add your photo here</span>
       </div>
     </div>
@@ -444,6 +634,90 @@
   <div class="marquee-label">Trusted by leading brands</div>
   <div class="marquee-track" id="marqueeTrack"></div>
 </div>
+
+<!-- ABOUT / FULL POSITIONING SECTION -->
+<section id="about" style="padding: 100px 60px; background: var(--bg);">
+  <div class="about-block">
+    <div class="section-label fade-in">About Me</div>
+    <h2 class="section-title fade-in">I Don't Just Run Ads —<br>I Build Complete <span style="color:var(--accent)">Revenue Engines</span></h2>
+    <p class="section-sub fade-in">Most marketers focus on traffic. I focus on engineering complete <span class="neon-highlight">growth systems</span> — because scaling a business is about the right strategy, messaging, funnel, and data working together.</p>
+
+    <!-- Authority + Differentiation -->
+    <div class="about-intro fade-in">
+      <div class="about-positioning">
+        <p>Over the years, I've managed <strong style="color:var(--dark)"><span id="aboutCounter">$800K+</span></strong> in paid advertising spend and worked with <strong style="color:var(--dark)">50+ brands</strong> across multiple industries — focusing on one core objective:</p>
+        <p style="color: var(--dark); font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;">Driving real business growth, not just vanity metrics.</p>
+        <p>Whether it's scaling a fast-growing D2C brand, optimizing a B2B lead funnel, or improving conversions for an educational platform — my focus remains the same: <strong style="color:var(--accent)">maximize ROI, stabilize growth, and build systems that scale consistently.</strong></p>
+      </div>
+      <div class="about-authority">
+        <p><strong>I work best with businesses that:</strong></p>
+        <ul class="ideal-list" style="margin-bottom:0">
+          <li><span class="check">✓</span> Are already investing in marketing but not seeing consistent returns</li>
+          <li><span class="check">✓</span> Want to scale beyond their current growth plateau</li>
+          <li><span class="check">✓</span> Value strategy, data, and long-term growth over shortcuts</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- What I Do -->
+    <div class="what-i-do fade-in">
+      <h3>What I Actually Do</h3>
+      <ul class="do-list">
+        <li>Transform underperforming campaigns into profitable revenue channels</li>
+        <li>Build high-converting sales funnels tailored to your audience</li>
+        <li>Develop content strategies that attract, engage, and convert</li>
+        <li>Apply brand psychology to influence buying decisions</li>
+        <li>Optimize customer journeys for higher conversion and retention</li>
+        <li>Turn first-time buyers into repeat, long-term customers</li>
+      </ul>
+    </div>
+
+    <!-- Framework Grid (6 blocks) -->
+    <div class="framework-section fade-in">
+      <h3>My Growth Framework</h3>
+      <p class="fw-desc">A multi-discipline approach that ensures every stage of your growth engine is optimized — not just the ads.</p>
+      <div class="framework-grid">
+        <div class="fw-card">
+          <span class="fw-icon">📡</span>
+          <div class="fw-card-title">Performance Marketing</div>
+          <div class="fw-card-text">Data-driven campaigns across Meta, TikTok &amp; more — built to convert and scale.</div>
+        </div>
+        <div class="fw-card">
+          <span class="fw-icon">🔁</span>
+          <div class="fw-card-title">Sales Funnel Strategy</div>
+          <div class="fw-card-text">From first click to final conversion — every stage engineered for maximum ROI.</div>
+        </div>
+        <div class="fw-card">
+          <span class="fw-icon">🧠</span>
+          <div class="fw-card-title">Brand Psychology &amp; Positioning</div>
+          <div class="fw-card-text">Crafting messages that trigger action and build lasting brand authority.</div>
+        </div>
+        <div class="fw-card">
+          <span class="fw-icon">🎨</span>
+          <div class="fw-card-title">Creative Strategy</div>
+          <div class="fw-card-text">High-converting ad creatives &amp; hooks that stop the scroll and drive decisions.</div>
+        </div>
+        <div class="fw-card">
+          <span class="fw-icon">📊</span>
+          <div class="fw-card-title">Analytics &amp; Optimization</div>
+          <div class="fw-card-text">Continuous testing, tracking, and scaling using real data — no guesswork.</div>
+        </div>
+        <div class="fw-card">
+          <span class="fw-icon">♻️</span>
+          <div class="fw-card-title">Retention &amp; Repeat Customer Systems</div>
+          <div class="fw-card-text">Maximizing lifetime value so every customer becomes a long-term revenue source.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Closing Hook -->
+    <div class="closing-hook fade-in">
+      <p>If you're looking for someone who doesn't just manage ads —<br>but builds a <span class="hook-em">complete revenue engine for your business</span>…</p>
+      <p style="font-size:0.95rem; margin-bottom: 28px;">then we should talk.</p>
+      <a href="#contact" class="btn-primary" style="display:inline-flex;">Let's Work Together →</a>
+    </div>
+  </div>
+</section>
 
 <!-- CLIENTS GRID -->
 <section id="clients">
@@ -470,27 +744,27 @@
   <div style="max-width:1100px;margin:0 auto;">
     <div class="section-label fade-in">My Expertise</div>
     <h2 class="section-title fade-in">How I Help Brands <span style="color:var(--accent)">Scale</span></h2>
-    <p class="section-sub fade-in">Specialized in helping established brands ($500k+ revenue) reach $5M+ through proven strategies.</p>
+    <p class="section-sub fade-in">Specialized in helping eCommerce, B2B, and Educational brands build complete <span class="neon-highlight">growth systems</span> that generate predictable, scalable profit.</p>
     <div class="expertise-grid fade-in">
       <div class="expertise-card">
         <div class="e-icon">📡</div>
-        <div class="e-title">Paid Media Strategy</div>
-        <div class="e-text">Strategic media planning and buying across all major platforms with a focus on achieving 300%+ ROAS and sustainable scaling.</div>
-      </div>
-      <div class="expertise-card">
-        <div class="e-icon">📈</div>
         <div class="e-title">Performance Marketing</div>
-        <div class="e-text">$10M+ in data-driven campaigns across Facebook, Google & TikTok — built to convert, built to scale.</div>
+        <div class="e-text">Data-driven paid campaigns across Meta, TikTok & more — managed $800K+ in ad spend with a relentless focus on ROI, not vanity metrics.</div>
       </div>
       <div class="expertise-card">
-        <div class="e-icon">🎨</div>
-        <div class="e-title">Creative Strategy</div>
-        <div class="e-text">Developing high-converting creative strategies and frameworks that speak to your audience and drive engagement.</div>
+        <div class="e-icon">🔁</div>
+        <div class="e-title">Sales Funnel Strategy</div>
+        <div class="e-text">Building high-converting sales funnels tailored to your audience — from first click to final conversion and beyond.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="e-icon">🧠</div>
+        <div class="e-title">Brand Psychology & Positioning</div>
+        <div class="e-text">Crafting messaging and positioning that trigger buying decisions and build real brand authority in competitive markets.</div>
       </div>
       <div class="expertise-card">
         <div class="e-icon">📊</div>
         <div class="e-title">Analytics & Optimization</div>
-        <div class="e-text">Deep-dive analytics setup, conversion tracking, and continuous optimization to maximize your marketing ROI.</div>
+        <div class="e-text">Continuous testing, tracking, and scaling using real data. Every decision is backed by numbers, not guesses.</div>
       </div>
     </div>
   </div>
@@ -574,9 +848,9 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">Rashidul Hasan Shamim</div>
-      <div class="footer-accent">Media Buyer & Growth Strategist</div>
-      <p class="footer-desc">I'm a media buyer and digital marketing strategist from Bangladesh. I specialize in performance marketing, paid advertising, and ROI-focused campaign optimization.</p>
+      <div class="footer-brand">Hamidul Islam Jensin</div>
+      <div class="footer-accent">Revenue-Focused Growth Strategist & Performance Marketer</div>
+      <p class="footer-desc">I help brands across eCommerce, B2B, and Educational platforms build complete growth systems — turning marketing into predictable, scalable profit.</p>
       <div class="footer-social">
         <a href="https://web.facebook.com/Shamim.Digital" class="social-btn" target="_blank" rel="noopener" title="Facebook">f</a>
         <a href="https://x.com/shamimthepro" class="social-btn" target="_blank" rel="noopener" title="Twitter / X">𝕏</a>
@@ -587,6 +861,7 @@
       <h4>Quick Links</h4>
       <ul>
         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#clients">Clients</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#expertise">Services</a></li>
@@ -599,7 +874,7 @@
       <div class="footer-email">📧 info@helloshamim.com</div>
     </div>
   </div>
-  <div class="footer-bottom">© 2025 Rashidul Hasan Shamim. All rights reserved. • Media Buyer & Growth Strategist</div>
+  <div class="footer-bottom">© 2025 Hamidul Islam Jensin. All rights reserved. • Revenue-Focused Growth Strategist & Performance Marketer</div>
 </footer>
 
 <div id="toast"></div>
@@ -723,6 +998,32 @@
       btn.textContent = '☕ Let\'s have a coffee';
     }
   });
+
+  // ── ANIMATED $800K+ COUNTER ──
+  function animateCounter(el, target, prefix, suffix, duration) {
+    let start = 0;
+    const step = target / (duration / 16);
+    el.classList.add('counter-anim');
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) {
+        start = target;
+        clearInterval(timer);
+      }
+      el.textContent = prefix + Math.floor(start) + suffix;
+    }, 16);
+  }
+
+  const counterEl = document.getElementById('adSpendCounter');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(counterEl, 800, '$', 'K+', 1400);
+        counterObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+  counterObserver.observe(counterEl);
 
   // Active nav link on scroll
   const sections = document.querySelectorAll('section[id]');
