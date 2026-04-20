@@ -1,7 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jensin | Growth Portfolio</title>
 
-<html>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0A0F1C;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+h1,h2,h3{
+    font-weight:700;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    background:linear-gradient(90deg,#00E5FF,#7B61FF);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    margin-top:20px;
+    opacity:0.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:#00E5FF;
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    box-shadow:0 0 20px #00E5FF;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:space-around;
+    padding:80px 0;
+    text-align:center;
+}
+
+.stat h2{
+    color:#00E5FF;
+    font-size:2rem;
+}
+
+/* CASE STUDY */
+.case{
+    padding:80px 0;
+}
+
+.case-card{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:15px;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.case-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(0,229,255,0.3);
+}
+
+/* SERVICES */
+.services{
+    padding:80px 0;
+    display:flex;
+    gap:20px;
+}
+
+.service{
+    flex:1;
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.service:hover{
+    box-shadow:0 0 25px rgba(0,229,255,0.4);
+}
+
+/* CTA */
+.cta{
+    padding:100px 0;
+    text-align:center;
+}
+
+.cta input{
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+    border:none;
+    width:250px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.6;
+}
+</style>
+</head>
+
 <body>
-  Hello
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>I Build Revenue Machines</h1>
+        <p>Scaling E-commerce Brands with Data + Psychology</p>
+        <a href="#" class="btn">Get Free Growth Plan</a>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats container">
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Brands Scaled</p>
+    </div>
+    <div class="stat">
+        <h2>3.5x</h2>
+        <p>Avg ROAS</p>
+    </div>
+    <div class="stat">
+        <h2>2.5Cr+</h2>
+        <p>Revenue Generated</p>
+    </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="case container">
+    <h2>Case Studies</h2>
+
+    <div class="case-card">
+        <h3>Ecom Brand Growth</h3>
+        <p>From low conversion to 5x ROAS using funnel strategy.</p>
+    </div>
+
+    <div class="case-card">
+        <h3>Lead Generation</h3>
+        <p>Generated 10k+ qualified leads with optimized creatives.</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services container">
+    <div class="service">
+        <h3>Scale Revenue</h3>
+        <p>Increase sales with data-driven ads</p>
+    </div>
+
+    <div class="service">
+        <h3>Fix Conversion</h3>
+        <p>Turn visitors into buyers</p>
+    </div>
+
+    <div class="service">
+        <h3>Sales Funnel</h3>
+        <p>Complete funnel setup</p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Want More Sales Without Increasing Ad Budget?</h2>
+
+    <input type="text" placeholder="Your Name">
+    <input type="text" placeholder="Business Name">
+    <br>
+    <a href="#" class="btn">Get Free Plan</a>
+</section>
+
+<footer>
+    © Jensin Growth Portfolio
+</footer>
+
+<script>
+// simple scroll animation
+window.addEventListener("scroll",()=>{
+    document.querySelectorAll(".case-card").forEach(el=>{
+        let pos = el.getBoundingClientRect().top;
+        if(pos < window.innerHeight){
+            el.style.opacity = 1;
+            el.style.transform = "translateY(0)";
+        }
+    });
+});
+</script>
+
 </body>
-  
 </html>
+
