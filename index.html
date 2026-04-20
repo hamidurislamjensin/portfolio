@@ -3,28 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jensin | Growth Portfolio</title>
+<title>Jensin | Growth Specialist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
 body{
+    margin:0;
+    font-family:Poppins;
     background:#0A0F1C;
     color:#fff;
-    overflow-x:hidden;
 }
 
-h1,h2,h3{
-    font-weight:700;
-}
-
+/* GLOBAL */
 .container{
     width:90%;
     max-width:1200px;
@@ -38,6 +29,7 @@ h1,h2,h3{
     align-items:center;
     justify-content:center;
     text-align:center;
+    background:radial-gradient(circle at center,#001F2F,#000);
 }
 
 .hero h1{
@@ -47,186 +39,147 @@ h1,h2,h3{
     color:transparent;
 }
 
-.hero p{
-    margin-top:20px;
-    opacity:0.8;
-}
-
 .btn{
-    display:inline-block;
-    margin-top:30px;
+    background:#00E5FF;
     padding:12px 30px;
     border-radius:30px;
-    background:#00E5FF;
+    display:inline-block;
+    margin-top:20px;
     color:#000;
-    font-weight:600;
     text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover{
-    box-shadow:0 0 20px #00E5FF;
+    font-weight:600;
 }
 
 /* STATS */
 .stats{
     display:flex;
     justify-content:space-around;
-    padding:80px 0;
-    text-align:center;
+    padding:60px 0;
 }
 
 .stat h2{
     color:#00E5FF;
-    font-size:2rem;
 }
 
-/* CASE STUDY */
+/* FLOW */
+.flow{
+    padding:80px 0;
+    text-align:center;
+}
+
+/* CASE */
 .case{
     padding:80px 0;
 }
 
 .case-card{
     background:rgba(255,255,255,0.05);
-    padding:30px;
-    border-radius:15px;
+    padding:25px;
+    border-radius:10px;
     margin-top:20px;
-    transition:0.3s;
 }
 
-.case-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 20px rgba(0,229,255,0.3);
-}
-
-/* SERVICES */
-.services{
-    padding:80px 0;
-    display:flex;
+/* LOGO GRID */
+.logos{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
     gap:20px;
+    padding:60px 0;
 }
 
-.service{
-    flex:1;
-    background:rgba(255,255,255,0.05);
-    padding:30px;
-    border-radius:15px;
+.logo{
+    background:#111;
+    padding:20px;
     text-align:center;
-    transition:0.3s;
+    border-radius:10px;
 }
 
-.service:hover{
-    box-shadow:0 0 25px rgba(0,229,255,0.4);
+/* TESTIMONIAL */
+.testimonial{
+    padding:80px 0;
 }
 
 /* CTA */
 .cta{
-    padding:100px 0;
     text-align:center;
+    padding:100px 0;
 }
 
-.cta input{
+input{
     padding:12px;
     margin:10px;
-    border-radius:10px;
     border:none;
-    width:250px;
+    border-radius:10px;
 }
 
+/* FOOTER */
 footer{
     text-align:center;
     padding:30px;
-    opacity:0.6;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
-    <div class="container">
-        <h1>I Build Revenue Machines</h1>
-        <p>Scaling E-commerce Brands with Data + Psychology</p>
-        <a href="#" class="btn">Get Free Growth Plan</a>
-    </div>
+<div>
+<h1>I Build Profitable Growth Systems</h1>
+<p>$800K+ Ad Spend Managed | Scaling Ecom Brands</p>
+<a class="btn">Get Free Audit</a>
+</div>
 </section>
 
-<!-- STATS -->
 <section class="stats container">
-    <div class="stat">
-        <h2>50+</h2>
-        <p>Brands Scaled</p>
-    </div>
-    <div class="stat">
-        <h2>3.5x</h2>
-        <p>Avg ROAS</p>
-    </div>
-    <div class="stat">
-        <h2>2.5Cr+</h2>
-        <p>Revenue Generated</p>
-    </div>
+<div class="stat"><h2>$800K+</h2><p>Ad Spend</p></div>
+<div class="stat"><h2>5X</h2><p>ROAS</p></div>
+<div class="stat"><h2>50+</h2><p>Brands</p></div>
 </section>
 
-<!-- CASE STUDY -->
+<section class="flow container">
+<h2>How I Grow Brands</h2>
+<p>Traffic → Funnel → Offer → Conversion → Retargeting → Repeat Sales</p>
+</section>
+
 <section class="case container">
-    <h2>Case Studies</h2>
+<h2>Case Studies</h2>
 
-    <div class="case-card">
-        <h3>Ecom Brand Growth</h3>
-        <p>From low conversion to 5x ROAS using funnel strategy.</p>
-    </div>
+<div class="case-card">
+<h3>Brand Scaling</h3>
+<p>From low ROAS to 5X using funnel strategy</p>
+</div>
 
-    <div class="case-card">
-        <h3>Lead Generation</h3>
-        <p>Generated 10k+ qualified leads with optimized creatives.</p>
-    </div>
+<div class="case-card">
+<h3>Lead Generation</h3>
+<p>Generated 10k+ leads</p>
+</div>
+
 </section>
 
-<!-- SERVICES -->
-<section class="services container">
-    <div class="service">
-        <h3>Scale Revenue</h3>
-        <p>Increase sales with data-driven ads</p>
-    </div>
-
-    <div class="service">
-        <h3>Fix Conversion</h3>
-        <p>Turn visitors into buyers</p>
-    </div>
-
-    <div class="service">
-        <h3>Sales Funnel</h3>
-        <p>Complete funnel setup</p>
-    </div>
+<section class="logos container">
+<div class="logo">Client 1</div>
+<div class="logo">Client 2</div>
+<div class="logo">Client 3</div>
+<div class="logo">Client 4</div>
+<div class="logo">Client 5</div>
 </section>
 
-<!-- CTA -->
+<section class="testimonial container">
+<h2>Client Reviews</h2>
+<p>"Great results and scaling strategy!"</p>
+</section>
+
 <section class="cta">
-    <h2>Want More Sales Without Increasing Ad Budget?</h2>
-
-    <input type="text" placeholder="Your Name">
-    <input type="text" placeholder="Business Name">
-    <br>
-    <a href="#" class="btn">Get Free Plan</a>
+<h2>Want to Scale Your Sales?</h2>
+<input placeholder="Your Name">
+<input placeholder="Website">
+<br>
+<a class="btn">Get Free Plan</a>
 </section>
 
 <footer>
-    © Jensin Growth Portfolio
+© Jensin Growth System
 </footer>
-
-<script>
-// simple scroll animation
-window.addEventListener("scroll",()=>{
-    document.querySelectorAll(".case-card").forEach(el=>{
-        let pos = el.getBoundingClientRect().top;
-        if(pos < window.innerHeight){
-            el.style.opacity = 1;
-            el.style.transform = "translateY(0)";
-        }
-    });
-});
-</script>
 
 </body>
 </html>
