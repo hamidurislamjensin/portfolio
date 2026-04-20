@@ -542,7 +542,7 @@
         </div>
         <div class="stat-box">
           <div class="stat-num">3+</div>
-          <div class="stat-label">Industries Served</div>
+          <div class="stat-label">Years of Experience</div>
         </div>
       </div>
       <div class="hero-btns">
@@ -828,40 +828,39 @@
     { company:"Skilluper", heading:"Unforgettable Collaborator", text:"Shamim always gave 100% effort. His media buying insights helped us deliver projects on time with real impact.", name:"Shamim Hussain", role:"Founder, Skilluper" },
   ];
 
-  const logoFiles = [
-    { file: "ZatiqEasy.png",       name: "ZatiqEasy" },
-    { file: "GhorerBazar.png",     name: "GhorerBazar" },
-    { file: "GoodyBro.png",        name: "GoodyBro" },
-    { file: "ZUQO.png",            name: "ZUQO" },
-    { file: "Asiatic360.png",      name: "Asiatic 360" },
-    { file: "Telaa.png",           name: "Telaa" },
-    { file: "BeingHuman.png",      name: "Being Human" },
-    { file: "BOHUFurniture.png",   name: "BOHU Furniture" },
-    { file: "JOTEY.png",           name: "JOTEY" },
-    { file: "Bosphorus.png",       name: "Bosphorus" },
-    { file: "Koryori.png",         name: "Koryori" },
-    { file: "SmartLife.png",       name: "SmartLife" },
-    { file: "UnivSouthAsia.png",   name: "Univ. of South Asia" },
-    { file: "Masculine.png",       name: "Masculine" },
-    { file: "Hazzle.png",          name: "Hazzle" },
-    { file: "Neviforce.png",       name: "Neviforce" },
-    { file: "MangoLover.png",      name: "Mango Lover" },
-    { file: "BRACHealthcare.png",  name: "BRAC Healthcare" },
-    { file: "Comfystyle.png",      name: "Comfystyle" },
-    { file: "CrimsonCup.png",      name: "Crimson Cup" },
-    { file: "CRISP.png",           name: "CRISP" },
-    { file: "Imo.png",             name: "Imo" },
-    { file: "Flipper.png",         name: "Flipper" },
-    { file: "NadiaFurniture.png",  name: "Nadia Furniture" },
-    { file: "Govaly.png",          name: "Govaly" },
-    { file: "ACIPure.png",         name: "ACI Pure" },
-    { file: "ACINutrilife.png",    name: "ACI Nutrilife" },
-    { file: "Fiero.png",           name: "Fiero" },
-    { file: "EcoEats.png",         name: "EcoEats" },
-    { file: "Glassesbd.png",       name: "Glassesbd" },
-    { file: "Zantrik.png",         name: "Zantrik" },
-    { file: "DapperBespoke.png",   name: "Dapper Bespoke" },
-  ];
+const logoFiles = [
+  { file: "alpha-tee.jpg", name: "Alpha Tee" },
+  { file: "auxtech.jpg", name: "Auxtech" },
+  { file: "bfi.jpg", name: "BFI" },
+  { file: "bgd-online-limited.jpg", name: "BGD Online Limited" },
+  { file: "city-car-imports.jpg", name: "City Car Imports" },
+  { file: "civic-architects.jpg", name: "Civic Architects" },
+  { file: "diman.jpg", name: "Diman" },
+  { file: "express-bazar.jpg", name: "Express Bazar" },
+  { file: "faith-automobiles.jpg", name: "Faith Automobiles" },
+  { file: "federal-international-school.jpg", name: "Federal International School" },
+  { file: "fm-shop.jpg", name: "FM Shop" },
+  { file: "funnel360.jpg", name: "Funnel360" },
+  { file: "gss.jpg", name: "GSS" },
+  { file: "hello-shop.jpg", name: "Hello Shop" },
+  { file: "khati-organic.jpg", name: "Khati Organic" },
+  { file: "kino-eye-films.jpg", name: "Kino Eye Films" },
+  { file: "lake-side-painting-.jpg", name: "Lake Side Painting" },
+  { file: "menora.jpg", name: "Menora" },
+  { file: "mifta-glow-room.jpg", name: "Mifta Glow Room" },
+  { file: "mofamarketing.jpg", name: "MofaMarketing" },
+  { file: "mongla-car-imports.jpg", name: "Mongla Car Imports" },
+  { file: "nation-export.jpg", name: "Nation Export" },
+  { file: "nittonova.jpg", name: "NittoNova" },
+  { file: "qubixcore.jpg", name: "Qubixcore" },
+  { file: "respos.jpg", name: "ResPos" },
+  { file: "rig-master.jpg", name: "Rig Master" },
+  { file: "rmr-leather.jpg", name: "RMR Leather" },
+  { file: "st-painting-services.jpg", name: "ST Painting Services" },
+  { file: "techspire.jpg", name: "Techspire" },
+  { file: "uni-exam.jpg", name: "UNI Exam" },
+  { file: "uni-support.jpg", name: "UNI Support" }
+];
 
   // ── RENDER CLIENTS ──
   const grid = document.getElementById('clientsGrid');
@@ -869,7 +868,7 @@
     const card = document.createElement('div');
     card.className = 'client-card fade-in';
     const img = document.createElement('img');
-    img.src = `logo/${file}`; img.alt = name;
+    img.src = `client/${file}`; img.alt = name;
     img.onerror = function() { this.style.display = 'none'; };
     const label = document.createElement('span');
     label.textContent = name;
