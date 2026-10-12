@@ -739,8 +739,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="website">Business Website <span class="required-star">*</span></label>
-          <input type="url" id="website" name="website" placeholder="https://yourbrand.com" required>
+          <label for="website">Business Website</label>
+          <input type="url" id="website" name="website" placeholder="https://yourbrand.com">
         </div>
       </div>
 
@@ -992,35 +992,29 @@ const logoFiles = [
     setTimeout(() => { t.className = ''; }, 4000);
   }
 
-  // ── FORM SUBMIT ──
-  const FORMSPREE_ID = 'YOUR_FORM_ID'; // ← Replace with your Formspree ID
+  // ── FORM SUBMIT → GOOGLE SHEET ──
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw-kj8ZkADyCaOFTNmzxFePgEajF-2WFLTiCTbMWH1GeU3Ldfv8rRa-OUHYuEnn5w7z7g/exec'; // ← Apps Script "Web app" URL (ends with /exec)
 
   document.getElementById('leadForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
     btn.disabled = true; btn.textContent = 'Sending...';
-    const data = {
+    const data = new URLSearchParams({
       fullName: document.getElementById('fullName').value,
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
       role: document.getElementById('role').value,
       website: document.getElementById('website').value,
       budget: document.getElementById('budget').value,
-      details: document.getElementById('details').value,
-      _replyto: document.getElementById('email').value,
-      _subject: `New Lead from ${document.getElementById('fullName').value} – Jensin Portfolio`,
-    };
+      details: document.getElementById('details').value
+    });
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      if (res.ok) {
-        document.getElementById('leadForm').style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'block';
-        showToast('Message sent successfully! ✅', 'success');
-      } else { throw new Error('failed'); }
+      // no-cors: Google Apps Script doesn't send CORS headers, so the response is opaque.
+      // The request still reaches the script and the row is added to the sheet.
+      await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data });
+      document.getElementById('leadForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      showToast('Message sent successfully! ✅', 'success');
     } catch (err) {
       showToast('Something went wrong. Please email jensinhamidulislam@gmail.com directly.', 'error');
       btn.disabled = false; btn.textContent = "☕ Let's have a coffee";
