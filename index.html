@@ -1022,20 +1022,20 @@ const logoFiles = [
   });
 
   // ── ANIMATED COUNTER ──
-  function animateCounter(el, target, prefix, suffix, duration) {
+  function animateCounter(el, target, prefix, suffix, duration, decimals = 0) {
     let start = 0;
     const step = target / (duration / 16);
     el.classList.add('counter-anim');
     const timer = setInterval(() => {
       start += step;
       if (start >= target) { start = target; clearInterval(timer); }
-      el.textContent = prefix + Math.floor(start) + suffix;
+      el.textContent = prefix + start.toFixed(decimals) + suffix;
     }, 16);
   }
   const counterEl = document.getElementById('adSpendCounter');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) { animateCounter(counterEl, 800, '$', 'K+', 1400); counterObserver.disconnect(); }
+      if (e.isIntersecting) { animateCounter(counterEl, 1.2, '$', 'M+', 1400, 1); counterObserver.disconnect(); }
     });
   }, { threshold: 0.5 });
   counterObserver.observe(counterEl);
